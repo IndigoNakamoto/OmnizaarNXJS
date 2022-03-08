@@ -1,3 +1,12 @@
+import Head from 'next/head'
+
 export default function Mint() {
-    return <h1>Mint</h1>
+    return (
+        <>
+            <Head>
+                <title>Omnizaar - Mint</title>
+            </Head>
+            <h1>Mint</h1>
+        </>
+    )
   }
