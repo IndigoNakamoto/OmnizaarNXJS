@@ -10,7 +10,9 @@ const Article = (props) => {
 					<H1 props={props.accent1}>{props.title}</H1>
 					<p>{props.subtitle}</p>
 				</StyleTitle>
-				<ReactMarkdown children={props.content} />
+				<StyleArticle>
+					<ReactMarkdown children={props.content} />
+				</StyleArticle>
 			</StyleDiv>
 			<Div />	
 			
@@ -19,6 +21,10 @@ const Article = (props) => {
 }
 
 export default Article
+
+const StyleArticle = styled.p`
+	font-weight: 100;
+`
 
 const Div = styled.div`
 	position: fixed;
