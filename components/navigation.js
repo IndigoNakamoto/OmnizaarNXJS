@@ -49,7 +49,7 @@ export default function Navigation() {
 
                 <Footer>
                     <a
-                        href="https://omnilite.org/"
+                        href="https://twitter.com/omnizaar"
                         target="_blank"
                         rel="noopener noreferrer"
                         >
