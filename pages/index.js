@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Navigation from '../components/navigation'
-// import styles from './index.module.css'
 import styled from 'styled-components';
 import Background from '../components/background'
 import { motion } from 'framer-motion'
@@ -19,16 +18,6 @@ export default function Home() {
       <Main>
         <h1>UNDER CONSTRUCTION</h1>
       </Main>
-      {/* <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel"/>
-        </a>
-      </footer> */}
     </motion.div>
   )
 }
