@@ -14,7 +14,7 @@ About.getInitialProps = async (ctx) => {
 //TODO: Pass down style colors. 
 export default function About({aboutData}) {
     const body = aboutData.attributes.Body
-    const hero = aboutData.attributes.Hero.data.attributes.formats.large.url
+    const hero = aboutData.attributes.Hero.data.attributes.formats.medium.url
     const background = '#212c37'
     const accent1 = 'green'
     const accent2 = '#37aec7'

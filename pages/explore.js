@@ -7,19 +7,19 @@ import { motion } from 'framer-motion'
 export default function Explore() {
     return (
         <motion.div initial={{opacity:0.75}} animate={{opacity:1}}>
-        <Div>
-            <Head>
-            <title>Omnizaar - Explore</title>
-            <link rel="icon" href="/favicon.ico" />
-            </Head>
-    
-            
-            <Navigation /> 
-            
-            <Main>
-              <h1>UNDER CONSTRUCTION</h1>
-            </Main>
-      </Div>
+          <Div>
+              <Head>
+              <title>Omnizaar - Explore</title>
+              <link rel="icon" href="/favicon.ico" />
+              </Head>
+      
+              
+              <Navigation /> 
+              
+              <Main>
+                <h1>UNDER CONSTRUCTION</h1>
+              </Main>
+        </Div>
       </motion.div>
     )
   }

@@ -1,53 +1,40 @@
 import Head from 'next/head'
 import Navigation from '../components/navigation'
-import styled from 'styled-components';
-// import Background from '../components/background'
 import { motion } from 'framer-motion'
+import Article from '../components/article';
+import Hero from '../components/articleHero'
 
-export default function Learn() {
+Learn.getInitialProps = async (ctx) => {
+    const res = await fetch("https://test-deploy-digital-ocean-hhbor.ondigitalocean.app/api/learn?populate=*")
+    const json = await res.json()
+    return { learnData: json.data}
+}
+
+//TODO: Include style colors in Strapi for editor to choose. 
+//TODO: Pass down style colors. 
+export default function Learn({learnData}) {
+    const body = learnData.attributes.Body
+    const hero = learnData.attributes.Hero.data.attributes.formats.medium.url
+    const background = '#212c37'
+    const accent1 = 'green'
+    const accent2 = '#37aec7'
+    const fontcolor = '#fcfcfc'
+
+    console.log(learnData)
+
     return (
         <motion.div initial={{opacity:0.75}} animate={{opacity:1}}>
-            <Div>
+            <>
                 <Head>
-                <title>Omnizaar - Learn</title>
+                    <title>Omnizaar - Learn</title>
                 </Head>
-        
                 
-                <Navigation /> 
-                
-                <Main>
-                <h1>UNDER CONSTRUCTION</h1>
-                </Main>
-        </Div>
+                <Navigation accent1={accent1}/> 
+                <Hero urlHero={hero} />
+                <Article content={body} title={'LEARN'} 
+                accent1={accent1} subtitle={''}
+                />                
+            </>
       </motion.div>
     )
-  }
-
-  const Div = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #212c37;
-    z-index: -1;
-    h1{
-        font-size: 2.5rem;
-        color: #fdfdfd;
-    }
-  `
-
-  const Main = styled.main`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    max-width: 68em;
-    margin: 0 auto;
-    height: 80vh;
-    color: #fdfdfd;
-    opacity: 90%;
-    z-index: 5;
-    
-`
+}
