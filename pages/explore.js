@@ -4,12 +4,12 @@ import styled from 'styled-components';
 // import Background from '../components/background'
 import { motion } from 'framer-motion'
 
-export default function Mint() {
+export default function Explore() {
     return (
         <motion.div initial={{opacity:0.75}} animate={{opacity:1}}>
         <Div>
             <Head>
-            <title>Omnizaar - Mint</title>
+            <title>Omnizaar - Explore</title>
             <link rel="icon" href="/favicon.ico" />
             </Head>
     
@@ -17,7 +17,7 @@ export default function Mint() {
             <Navigation /> 
             
             <Main>
-            <h1>UNDER CONSTRUCTION</h1>
+              <h1>UNDER CONSTRUCTION</h1>
             </Main>
       </Div>
       </motion.div>
@@ -30,16 +30,16 @@ export default function Mint() {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #39243e;
+    background-color: #1a2c4c;
     z-index: -1;
     h1{
-        color: #d4f5fc;
         font-size: 2.5rem;
+        color: #e8e4ce;
     }
   `
 
   const Main = styled.main`
-  text-align: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
