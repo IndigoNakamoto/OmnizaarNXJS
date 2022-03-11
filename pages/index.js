@@ -1,38 +1,46 @@
 import Head from 'next/head'
-import Nav from '../components/navigation'
+import Navigation from '../components/navigation'
+// import styles from './index.module.css'
+import styled from 'styled-components';
+import Background from '../components/background'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
-    <div className="container">
+    <motion.div exit={{opacity:0}} initial={{opacity:0}} animate={{opacity:1}}>
       <Head>
         <title>Omnizaar</title>
-        <link rel="icon" href="/favicon.ico" />
+        
       </Head>
 
-      <Nav /> 
+      <Background />
+      <Navigation /> 
       
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing
-        </p>
-      </main>
-
-
-      <footer>
+      <Main>
+        <h1>UNDER CONSTRUCTION</h1>
+      </Main>
+      {/* <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
+          <img src="/vercel.svg" alt="Vercel"/>
         </a>
-      </footer>
-
-    </div>
+      </footer> */}
+    </motion.div>
   )
 }
+
+const Main = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+  h1{
+    font-size: 2.5rem;
+    color: #d64614;
+  }
+`
