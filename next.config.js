@@ -3,7 +3,9 @@ module.exports = {
     optimizeFonts: false,
     images: {
       loader: "default",
-      domains: ["localhost"],
+      domains: ["localhost", 
+      'test-deploy-digital-ocean-hhbor.ondigitalocean.app', 
+      'strapi-space-test.sfo3.digitaloceanspaces.com'],
     },
     compiler: {
       // ssr and displayName are configured by default

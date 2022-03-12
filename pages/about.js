@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Navigation from '../components/navigation'
 import { motion } from 'framer-motion'
 import Article from '../components/article';
-import Hero from '../components/articleHero'
+import ImageHero from '../components/ImageHero'
 
 About.getInitialProps = async (ctx) => {
     const res = await fetch("https://test-deploy-digital-ocean-hhbor.ondigitalocean.app/api/about?populate=*")
@@ -14,7 +14,7 @@ About.getInitialProps = async (ctx) => {
 //TODO: Pass down style colors. 
 export default function About({aboutData}) {
     const body = aboutData.attributes.Body
-    const hero = aboutData.attributes.Hero.data.attributes.formats.medium.url
+    const heroData = aboutData.attributes.Hero.data.attributes
     const background = '#212c37'
     const accent1 = 'green'
     const accent2 = '#37aec7'
@@ -28,10 +28,10 @@ export default function About({aboutData}) {
                 </Head>
                 
                 <Navigation accent1={accent1}/> 
-                <Hero urlHero={hero} />
-                    <Article content={body} title={'ABOUT'} 
-                    accent1={accent1} subtitle={'About Omnizaar'}
-                    />                
+                <ImageHero heroData={heroData}/>
+                <Article content={body} title={'ABOUT'} 
+                accent1={accent1} subtitle={'About Omnizaar'}
+                />                
             </>
       </motion.div>
     )
