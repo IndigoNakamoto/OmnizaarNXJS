@@ -1,13 +1,14 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
 import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 const Article = (props) => {
     return (
-        <>
+        <ThemeProvider theme={props.theme}>
 			<StyleDiv>
 				<StyleTitle>
-					<H1 props={props.accent1}>{props.title}</H1>
+					<H1>{props.title}</H1>
 					<p>{props.subtitle}</p>
 				</StyleTitle>
 				<StyleArticle>
@@ -16,7 +17,7 @@ const Article = (props) => {
 			</StyleDiv>
 			<Div />	
 			
-		</>
+		</ThemeProvider>
     )
 }
 
@@ -45,6 +46,7 @@ const StyleTitle = styled.div`
 const H1 = styled.h1`
 	letter-spacing: .25rem;
 	font-size: 2.5rem;
+	color: ${props => props.theme.main};
 `
 
 const StyleDiv = styled.div`

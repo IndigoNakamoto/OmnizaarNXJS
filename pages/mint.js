@@ -5,6 +5,9 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion'
 
 export default function Mint() {
+    const theme = {
+      main: "#d4f5fc"
+    };
     return (
         <motion.div initial={{opacity:0.75}} animate={{opacity:1}}>
         <Div>
@@ -14,7 +17,7 @@ export default function Mint() {
             </Head>
     
             
-            <Navigation /> 
+            <Navigation theme={theme}/> 
             
             <Main>
             <h1>UNDER CONSTRUCTION</h1>
@@ -24,22 +27,22 @@ export default function Mint() {
     )
   }
 
-  const Div = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #39243e;
-    z-index: -1;
-    h1{
-        color: #d4f5fc;
-        font-size: 2.5rem;
-    }
-  `
+const Div = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #39243e;
+  z-index: -1;
+  h1{
+      color: #d4f5fc;
+      font-size: 2.5rem;
+  }
+`
 
-  const Main = styled.main`
-  text-align: center;
+const Main = styled.main`
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;

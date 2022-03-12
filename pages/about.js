@@ -15,10 +15,9 @@ About.getInitialProps = async (ctx) => {
 export default function About({aboutData}) {
     const body = aboutData.attributes.Body
     const heroData = aboutData.attributes.Hero.data.attributes
-    const background = '#212c37'
-    const accent1 = 'green'
-    const accent2 = '#37aec7'
-    const fontcolor = '#fcfcfc'
+    const theme = {
+        main: "#37aec7"
+      };
 
     return (
         <motion.div initial={{opacity:0.75}} animate={{opacity:1}}>
@@ -27,12 +26,13 @@ export default function About({aboutData}) {
                     <title>Omnizaar - About Us</title>
                 </Head>
                 
-                <Navigation accent1={accent1}/> 
+                <Navigation theme={theme}/> 
                 <ImageHero heroData={heroData}/>
                 <Article content={body} title={'ABOUT'} 
-                accent1={accent1} subtitle={'About Omnizaar'}
+                theme={theme} subtitle={'About Omnizaar'}
                 />                
             </>
       </motion.div>
     )
 }
+

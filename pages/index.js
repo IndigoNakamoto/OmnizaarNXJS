@@ -5,6 +5,10 @@ import Background from '../components/background'
 import { motion } from 'framer-motion'
 
 export default function Home() {
+  const theme = {
+    main: "#d64614"
+  };
+
   return (
     <motion.div exit={{opacity:0}} initial={{opacity:0}} animate={{opacity:1}}>
       <Head>
@@ -13,7 +17,7 @@ export default function Home() {
       </Head>
 
       <Background />
-      <Navigation /> 
+      <Navigation theme={theme}/> 
       
       <Main>
         <h1>UNDER CONSTRUCTION</h1>

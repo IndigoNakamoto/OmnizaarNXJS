@@ -2,73 +2,76 @@ import Link from 'next/link'
 import {useState} from "react";
 import styled from 'styled-components';
 import {AiOutlineMenu, AiOutlineClose, AiOutlineTwitter} from 'react-icons/ai'
+import { ThemeProvider } from 'styled-components';
 
-export default function Navigation() {
+export default function Navigation(props) {
     const [open, setOpen] = useState(false)
     return (
-        <Header>
-            <Link href="/" onClick={() => setOpen(false)}>
-                <a className='logo'>OMNIZAAR</a>
-            </Link>
-            <Nav open={open}>
-                <div>
-                    
-                    
-                    <Link href="/" onClick={() => setOpen(false)}>
-                        <a className='navlogo'>OMNIZAAR</a>
-                    </Link>
-
-                    <AiOutlineClose className='close' onClick={() => setOpen(false)}/>
-                </div>
-                <ul>
-                    <li>
-                        <Link href="/about">
-                            <a onClick={() => setOpen(false)}>ABOUT</a>
-                        </Link>
+        <ThemeProvider theme={props.theme}>
+            <Header>
+                <Link href="/" onClick={() => setOpen(false)}>
+                    <a className='logo'>OMNIZAAR</a>
+                </Link>
+                <Nav open={open}>
+                    <div>
                         
-                    </li>
-                    {/* <li>
-                        <Link href="/explore">
-                            <a onClick={() => setOpen(false)}>EXPLORE</a>
-                        </Link>
                         
-                    </li> */}
-                    <li>
-                        <Link href="/learn">
-                            <a onClick={() => setOpen(false)}>LEARN</a>
+                        <Link href="/" onClick={() => setOpen(false)}>
+                            <a className='navlogo'>OMNIZAAR</a>
                         </Link>
-                        {/* <CgMathPlus className='expand'/> */}
-                    </li>
-                    <li>
-                        <Link href="/mint">
-                            <a onClick={() => setOpen(false)}>MINT</a>
-                        </Link>
-                        {/* <CgMathPlus className='expand'/> */}
-                    </li>
-                </ul>
 
-                <Footer>
-                    <a
-                        href="https://twitter.com/omnizaar"
+                        <AiOutlineClose className='close' onClick={() => setOpen(false)}/>
+                    </div>
+                    <ul>
+                        <li>
+                            <Link href="/about">
+                                <a onClick={() => setOpen(false)}>ABOUT</a>
+                            </Link>
+                            
+                        </li>
+                        {/* <li>
+                            <Link href="/explore">
+                                <a onClick={() => setOpen(false)}>EXPLORE</a>
+                            </Link>
+                            
+                        </li> */}
+                        <li>
+                            <Link href="/learn">
+                                <a onClick={() => setOpen(false)}>LEARN</a>
+                            </Link>
+                            {/* <CgMathPlus className='expand'/> */}
+                        </li>
+                        <li>
+                            <Link href="/mint">
+                                <a onClick={() => setOpen(false)}>MINT</a>
+                            </Link>
+                            {/* <CgMathPlus className='expand'/> */}
+                        </li>
+                    </ul>
+
+                    <Footer>
+                        <a
+                            href="https://twitter.com/omnizaar"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
+                        <AiOutlineTwitter className='social'/> 
+                        </a>
+                        <a
+                        href="https://omnilite.org/"
                         target="_blank"
                         rel="noopener noreferrer"
                         >
-                    <AiOutlineTwitter className='social'/> 
-                    </a>
-                    <a
-                    href="https://omnilite.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >
-                    Powered by{' '}
-                    <img src="/omnilite-logo.svg" alt="Omnilite"/>
-                    </a>
-                </Footer>
-            </Nav>
+                        Powered by{' '}
+                        <img src="/omnilite-logo.svg" alt="Omnilite"/>
+                        </a>
+                    </Footer>
+                </Nav>
 
-            <AiOutlineMenu className='menu' open={open} onClick={() => setOpen(!open)}/> 
+                <AiOutlineMenu className='menu' open={open} onClick={() => setOpen(!open)}/> 
 
-        </Header>
+            </Header>
+        </ThemeProvider>
     )
 }
 
@@ -103,7 +106,6 @@ const Footer = styled.footer`
         }
     }
 `
-
 const Nav = styled.nav` 
     position: fixed;
     right: 0;
@@ -187,17 +189,22 @@ const Header = styled.header`
     padding: 1em 1.5em;
     z-index: 999;
     height: 3em;
-    
+
     .logo {         
-        color: white;
         font-size: 2.25rem;
         font-weight: bold;
         text-decoration: underline;
-    }
+        color: ${props => props.theme.main};
+    }   
 
     .menu{
         font-size: 1.75rem;
-        color: white;
+        color: ${props => props.theme.main};
         cursor: pointer;
     }
 `
+Header.defaultProps = {
+    theme: {  
+        main: 'white', 
+    }
+}

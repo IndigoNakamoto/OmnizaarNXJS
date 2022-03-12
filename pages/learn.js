@@ -16,12 +16,10 @@ export default function Learn({learnData}) {
     const body = learnData.attributes.Body
     const hero = learnData.attributes.Hero.data.attributes.formats.medium.url
     const heroData = learnData.attributes.Hero.data.attributes
-    const background = '#212c37'
-    const accent1 = 'green'
-    const accent2 = '#37aec7'
-    const fontcolor = '#fcfcfc'
 
-    console.log(learnData)
+    const theme = {
+        main: "#fcfcfc"
+      };
 
     return (
         <motion.div initial={{opacity:0.75}} animate={{opacity:1}}>
@@ -30,10 +28,10 @@ export default function Learn({learnData}) {
                     <title>Omnizaar - Learn</title>
                 </Head>
                 
-                <Navigation accent1={accent1}/> 
+                <Navigation theme={theme} /> 
                 <ImageHero heroData={heroData}/>
                 <Article content={body} title={'LEARN'} 
-                accent1={accent1} subtitle={''}
+                theme={theme}  subtitle={''}
                 />                
             </>
       </motion.div>
