@@ -14,7 +14,7 @@ export default function Explore() {
               </Head>
       
               
-              <Navigation /> 
+              <Navigation theme={theme}/> 
               
               <Main>
                 <h1>UNDER CONSTRUCTION</h1>

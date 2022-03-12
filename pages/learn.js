@@ -34,6 +34,6 @@ export default function Learn({learnData}) {
                 theme={theme}  subtitle={''}
                 />                
             </>
-      </motion.div>
+        </motion.div>
     )
 }
