@@ -5,24 +5,28 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion'
 
 export default function Explore() {
-    return (
-        <motion.div initial={{opacity:0.75}} animate={{opacity:1}}>
-          <Div>
-              <Head>
-              <title>Omnizaar - Explore</title>
-              <link rel="icon" href="/favicon.ico" />
-              </Head>
-      
-              
-              <Navigation theme={theme}/> 
-              
-              <Main>
-                <h1>UNDER CONSTRUCTION</h1>
-              </Main>
-        </Div>
-      </motion.div>
-    )
-  }
+  const theme = {
+    main: "#37aec7"
+  };
+
+  return (
+      <motion.div initial={{opacity:0.75}} animate={{opacity:1}}>
+        <Div>
+            <Head>
+            <title>Omnizaar - Explore</title>
+            <link rel="icon" href="/favicon.ico" />
+            </Head>
+    
+            
+            <Navigation theme={theme}/> 
+            
+            <Main>
+              <h1>UNDER CONSTRUCTION</h1>
+            </Main>
+      </Div>
+    </motion.div>
+  )
+}
 
   const Div = styled.div`
     position: absolute;
