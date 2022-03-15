@@ -54,4 +54,5 @@ const Main = styled.main`
     color: #fdfdfd;
     opacity: 90%;
     z-index: 5;
+    
 `
