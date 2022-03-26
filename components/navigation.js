@@ -10,7 +10,7 @@ export default function Navigation(props) {
         <ThemeProvider theme={props.theme}>
             <Header>
                 <Link href="/" onClick={() => setOpen(false)}>
-                    <a className='logo'>OMNIZAAR</a>
+                  <Logo src="/omnizaar.svg" alt="Omnizaar"/>
                 </Link>
                 <Nav open={open}>
                     <div>
@@ -97,6 +97,11 @@ export default function Navigation(props) {
         </ThemeProvider>
     )
 }
+const Logo = styled.img`
+  color: black;
+  width: 12rem;
+  cursor: pointer;
+`
 
 const Footer = styled.footer`
     position: fixed;
