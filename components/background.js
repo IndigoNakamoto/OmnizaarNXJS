@@ -14,13 +14,13 @@ export default BackgroundVideo;
 const VideoBackground = styled.video` 
     position: fixed;
     top: 0;
-    left: 0;
-	bottom: 0;
-	right: 0;
+    bottom: 0;
+    left: -35vw;
     background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;    
-    min-height: 100%;
-    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
     z-index: -1;
+    padding: 0;
+    margin: 0;
 `
