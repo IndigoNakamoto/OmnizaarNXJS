@@ -55,12 +55,6 @@ export default function Home() {
               </li> 
 
               <li>
-                <Link href="https://discord.gg/cURfeczgqQ/" passHref={true} target="_blank">
-                  <a>Discord</a>
-                </Link>
-              </li> 
-
-              <li>
                 <Link href="https://www.instagram.com/omnizaarart/" passHref={true} target="_blank">
                   <a>Instagram</a>
                 </Link>

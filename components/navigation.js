@@ -2,6 +2,7 @@ import Link from 'next/link'
 import {useState} from "react";
 import styled from 'styled-components';
 import {AiOutlineMenu, AiOutlineClose, AiOutlineTwitter} from 'react-icons/ai'
+import { BiLinkExternal } from 'react-icons/bi'
 import { ThemeProvider } from 'styled-components';
 
 export default function Navigation(props) {
@@ -50,12 +51,7 @@ export default function Navigation(props) {
                         <li>
                             <Link href="https://omnilite.org/" passHref={true} target="_blank">
                                 <a>OmniLite</a>
-                            </Link>
-                        </li> 
-
-                        <li>
-                            <Link href="https://discord.gg/cURfeczgqQ/" passHref={true} target="_blank">
-                                <a>Discord</a>
+                                
                             </Link>
                         </li> 
 
