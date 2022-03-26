@@ -47,6 +47,13 @@ export default function Home() {
                       <a>Learn</a>
                   </Link>
               </li>
+
+              <li>
+                <Link href="https://omnilite.org/" passHref={true} target="_blank">
+                  <a>OmniLite</a>
+                </Link>
+              </li> 
+
               <li>
                 <Link href="https://discord.gg/cURfeczgqQ/" passHref={true} target="_blank">
                   <a>Discord</a>
@@ -82,21 +89,32 @@ const Logo = styled.img`
 const Footer = styled.footer`
   position: fixed;
   bottom: 0;
-  right: 0;
-  min-width: 50vw;
-  max-width: 68rem;
+  left: 50vw;
+  @media (max-width: 950px) {
+    left: 40vw;
+    
+  }
+  @media (max-width: 750px) {
+    left: 0;
+  }  
 `
 
 const Nav = styled.nav`
   ul{
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
+    
     li{
       cursor: pointer;
       color: black;      
+      padding-top: .5em;
+      @media (min-width: 1200px) {
+          padding-right: .9em;   
+        }
       a{
         font-size: .9rem;
-        padding-right: 3em;
+        padding-right: 1.5em;
         text-decoration: none;
         color: grey;
       }
@@ -117,7 +135,14 @@ const Main = styled.main`
   top: 0;
   right: 0;
   bottom: 0;
-  
+  @media (max-width: 950px) {
+    width: 60vw;
+    min-width: 60vw;
+  }
+
+  @media (max-width: 750px) {
+    width: 100vw;
+  }  
   
   h1{
     font-size: 4.5rem;

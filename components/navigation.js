@@ -25,7 +25,7 @@ export default function Navigation(props) {
                     <ul>
                         <li>
                             <Link href="/about">
-                                <a onClick={() => setOpen(false)}>ABOUT</a>
+                                <a onClick={() => setOpen(false)}>About</a>
                             </Link>
                             
                         </li>
@@ -37,19 +37,42 @@ export default function Navigation(props) {
                         </li> */}
                         <li>
                             <Link href="/learn">
-                                <a onClick={() => setOpen(false)}>LEARN</a>
+                                <a onClick={() => setOpen(false)}>Learn</a>
                             </Link>
                             {/* <CgMathPlus className='expand'/> */}
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href="/mint">
                                 <a onClick={() => setOpen(false)}>MINT</a>
                             </Link>
-                            {/* <CgMathPlus className='expand'/> */}
+                            <CgMathPlus className='expand'/>
+                        </li> */}
+                        <li>
+                            <Link href="https://omnilite.org/" passHref={true} target="_blank">
+                                <a>OmniLite</a>
+                            </Link>
+                        </li> 
+
+                        <li>
+                            <Link href="https://discord.gg/cURfeczgqQ/" passHref={true} target="_blank">
+                                <a>Discord</a>
+                            </Link>
+                        </li> 
+
+                        <li>
+                            <Link href="https://www.instagram.com/omnizaarart/" passHref={true} target="_blank">
+                                <a>Instagram</a>
+                            </Link>
+                        </li>              
+
+                        <li>
+                            <Link href="https://twitter.com/omnizaar" passHref={true} target="_blank">
+                                <a>Twitter</a>
+                            </Link>
                         </li>
                     </ul>
 
-                    <Footer>
+                    {/* <Footer>
                         <a
                             href="https://twitter.com/omnizaar"
                             target="_blank"
@@ -65,7 +88,7 @@ export default function Navigation(props) {
                         Powered by{' '}
                         <img src="/omnilite-logo.svg" alt="Omnilite"/>
                         </a>
-                    </Footer>
+                    </Footer> */}
                 </Nav>
 
                 <AiOutlineMenu className='menu' open={open} onClick={() => setOpen(!open)}/> 
