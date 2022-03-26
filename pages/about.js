@@ -16,7 +16,7 @@ export default function About({aboutData}) {
     const body = aboutData.attributes.Body
     const heroData = aboutData.attributes.Hero.data.attributes
     const theme = {
-        main: "#37aec7"
+        main: "#E6E9EA"
       };
 
     return (
