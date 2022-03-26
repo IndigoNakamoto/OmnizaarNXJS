@@ -17,7 +17,7 @@ export default function Navigation(props) {
                         
                         
                         <Link href="/" onClick={() => setOpen(false)}>
-                            <a className='navlogo'>OMNIZAAR</a>
+                            <Logo src="/omnizaar.svg" alt="Omnizaar"/>
                         </Link>
 
                         <AiOutlineClose className='close' onClick={() => setOpen(false)}/>
