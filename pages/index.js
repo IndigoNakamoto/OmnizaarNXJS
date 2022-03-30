@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Background from '../components/background'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import {AiOutlineMenu, AiOutlineClose, AiOutlineTwitter, AiOutlineInstagram} from 'react-icons/ai'
 
 export default function Home() {
   const theme = {
@@ -18,7 +19,7 @@ export default function Home() {
       </Head>
 
       <Background />
-      {/* <Navigation theme={theme}/>  */}
+      <Navigation theme={theme}/> 
       
       <Main>
 
@@ -47,24 +48,24 @@ export default function Home() {
                       <a>Learn</a>
                   </Link>
               </li>
-
               <li>
-                <Link href="https://omnilite.org/" passHref={true} target="_blank">
-                  <a>OmniLite</a>
-                </Link>
-              </li> 
-
+                <a
+                    href="https://twitter.com/omnizaar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <AiOutlineTwitter className='social'/> 
+                </a>
+              </li>   
               <li>
-                <Link href="https://www.instagram.com/omnizaarart/" passHref={true} target="_blank">
-                  <a>Instagram</a>
-                </Link>
-              </li>              
-
-              <li>
-                <Link href="https://twitter.com/omnizaar" passHref={true} target="_blank">
-                  <a>Twitter</a>
-                </Link>
-              </li>
+                <a
+                    href="https://instagram.com/omnizaarart"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <AiOutlineInstagram className='social'/> 
+                </a> 
+              </li>      
 
 
             </ul>
@@ -83,7 +84,7 @@ const Logo = styled.img`
 const Footer = styled.footer`
   position: fixed;
   bottom: 0;
-  left: 50vw;
+  
   @media (max-width: 950px) {
     left: 40vw;
     
@@ -111,6 +112,9 @@ const Nav = styled.nav`
         padding-right: 1.5em;
         text-decoration: none;
         color: grey;
+      }
+      .social{
+        font-size: 1.2rem;
       }
     }
     
