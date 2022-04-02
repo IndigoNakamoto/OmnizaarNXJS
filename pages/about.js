@@ -33,81 +33,8 @@ export default function About({aboutData}) {
                 <ImageHero heroData={heroData}/>
                 <Article content={body} title={'ABOUT'} 
                 theme={theme} subtitle={'About Omnizaar'}
-                />
-                <Footer>
-                <Nav>
-                    <ul>
-                    <li>
-                        <Link href="/about">
-                            <a>About</a>
-                        </Link>
-                        
-                    </li>
-                    <li>
-                        <Link href="/learn">
-                            <a>Learn</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <a
-                            href="https://twitter.com/omnizaar"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >
-                            <AiOutlineTwitter className='social'/> 
-                        </a>
-                    </li>   
-                    <li>
-                        <a
-                            href="https://instagram.com/omnizaarart"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >
-                            <AiOutlineInstagram className='social'/> 
-                        </a> 
-                    </li>      
-
-
-                    </ul>
-                </Nav>
-                </Footer>                
+                />            
             </>
       </motion.div>
     )
 }
-
-
-const Footer = styled.footer`
-    position: absolute;
-    max-width: 68em;
-    bottom: 0;
-    margin: 0 auto;
-    padding: 0 1.5em;
-    left: 0;
-    right: 0;
-`
-
-const Nav = styled.nav`
-  ul{
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    
-    li{
-      cursor: pointer;
-      color: black;      
-      padding-top: .5em;
-      a{
-        font-size: .9rem;
-        padding-right: 1.5em;
-        text-decoration: none;
-        color: grey;
-      }
-      .social{
-        font-size: 1.2rem;
-      }
-    }
-    
-  }
-
-`

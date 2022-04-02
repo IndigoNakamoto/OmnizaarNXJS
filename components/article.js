@@ -53,6 +53,7 @@ const StyleDiv = styled.div`
 	position: absolute;
 	max-width: 68em;
 	top: 40vh;
+	
 	color: white;
 	margin: 0 auto;
 	padding: 0 1.5em;
