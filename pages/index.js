@@ -124,7 +124,7 @@ const Nav = styled.nav`
 
 const Main = styled.main`
   position: fixed;
-  background-color: #E6E9EA;
+  background-color: white;
   margin: 0;
   padding: 0;
   width: 50vw;
